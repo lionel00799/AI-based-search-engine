@@ -35,7 +35,7 @@ class EveryLLM(BaseLLM):
         self,
         model: str,
     ):
-        os.environ.setdefault("OLLAMA_API_BASE", "http://192.168.140.246:11434/api/generate")
+        os.environ.setdefault("OLLAMA_API_BASE", "http://localhost:11434/api/generate")
 
         validation = validate_environment(model)
         if validation["missing_keys"]:
